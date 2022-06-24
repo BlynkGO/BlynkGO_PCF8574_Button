@@ -18,13 +18,16 @@
 #include <PCF8574.h>                       // https://github.com/xreef/PCF8574_library
 #include "BlynkGO_PCF8574_Button.h"
 
-PCF8574 pcf8574(0x20);
-PCF8574_Button button(pcf8574, P0);
-//PCF8574_Button button(pcf8574, P0, LOW); // หาก ปุ่มกด เมื่อมีการกดมีสถานะเป็น LOW
+#define PCF8574_ADDR      0x20
+#define PCF8574_PIN       P0
+
+PCF8574 pcf8574(PCF8574_ADDR);
+PCF8574_Button button(pcf8574, PCF8574_PIN);
+//PCF8574_Button button(pcf8574, PCF8574_PIN, LOW); // หาก ปุ่มกด เมื่อมีการกดมีสถานะเป็น LOW
 
 void setup() {
   Serial.begin(115200); Serial.println();
-  pcf8574.pinMode(P0, INPUT);
+  pcf8574.pinMode(PCF8574_PIN, INPUT);
   if (!pcf8574.begin()){
     Serial.println("[PCF8574] failed");
     return;
