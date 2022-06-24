@@ -33,7 +33,10 @@ void PCF8574_Button::loop(){
           _state = BTN_ST_PRESSING;
           if(pressing_cb) pressing_cb(this);
         }else{
-          _state = BTN_ST_RELEASED;       
+          _state = BTN_ST_RELEASED;   
+          if(released_cb) released_cb(this);
+          if(clicked_cb)  clicked_cb(this);
+          _is_longpressed=false;
         }
       }    
       break;
@@ -52,6 +55,7 @@ void PCF8574_Button::loop(){
           _state = BTN_ST_RELEASED;
           if(released_cb) released_cb(this);
           if(clicked_cb)  clicked_cb(this);
+          _is_longpressed=false;
         }
       }
       break;
