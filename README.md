@@ -4,6 +4,12 @@
 <p align="left">
   <img src="PCF8574_RefrigButton_Wiring.png" alt="image"/>
 </p>  
+  
+  
+<p align="left">
+  <img src="PCF8574_RefrigButton_Wiring_MEGA.png" alt="image"/>
+</p>  
+
 
 ## PCF8574 I2C Address
   
