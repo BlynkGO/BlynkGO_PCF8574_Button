@@ -1,5 +1,7 @@
 # BlynkGO_PCF8574_Button
- Button by event  on PCF8574 I/O expander I2C
+ ไลบรารี่สำหรับ ทำขา PCF8574 I/O expander I2C  
+ให้มาทำเป็นปุ่มกด โดยยกระดับ code ให้กลายเป็นระบบ event  
+ซึ่งจะช่วยให้ code สั้น กระชับ ยิ่งขึ้น
   
 <p align="left">
   <img src="PCF8574_RefrigButton_Wiring.png" alt="image"/>
